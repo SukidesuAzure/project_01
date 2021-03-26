@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+    <!-- <script>
+        let obj = {
+            uname: '王可可',
+            age: '18',
+            six: '公'
+        }
+
+        var newObj = Object.keys(obj);
+        console.log(newObj);
+
+        Object.defineProperty(obj, 'skill', {
+            value: 'play',
+            writable: false,
+            enumerable: true,
+            configurable: false,
+        })
+
+        // Object.defineProperty()方法
+        Object.defineProperty(obj, 'skill', {
+            value: 'play',
+            writable: false,
+            enumerable: true,
+            configurable: false,
+        })
+
+        console.log(obj);
+    </script> -->
+
+    <!-- <script>
+        function Father(uname) {
+            this.uname = uname;
+        }
+
+        function Son(uname) {
+            Father.apply(this, [uname]);
+        }
+
+        var son = new Son('wkk');
+        console.log(son.uname);
+
+        let arr = [1, 1, 2, 1, 1, 1];
+        let newArr = Math.max.apply(Math, arr);
+        console.log(newArr);
+    </script> -->
+
+    <!-- <script>
+        let arr = [1, 1, 2, 1, 1, 1];
+        let newArr = Math.max.bind(Math, ...arr);
+        console.log(newArr());
+    </script> -->
+
+    <!-- <script>
+        var btns = document.querySelectorAll('button');
+
+        btns[1].addEventListener('click', function () {
+
+        })
+    </script> -->
+
+    <!-- <script>
+        // instanceof 运算符
+
+        var arr = [];
+        console.log(arr instanceof Array);
+    </script> -->
+
+    <!-- <script>
+        function fn(a, b, callback) {
+            console.log(a + b);
+            callback && callback();
+        }
+
+        fn(1, 1, function () {
+            console.log('高阶函数，回调函数');
+        })
+    </script> -->
+
+    <!-- <script>
+        /*  // 闭包
+         function fn() {
+             let num = 10;
+             return function () {
+                 console.log(num);
+             }
+         }
+ 
+         var fn1 = fn();
+         fn1(); */
+
+        var btns = document.querySelectorAll('button');
+        let index = 0;
+        for (var i = 0; i < btns.length; i++) {
+            (function fn(i) {
+                btns[i].addEventListener('click', function () {
+                    console.log(i);
+                })
+            })(i)
+        }
+    </script> -->
+
+    <!-- <script>
+        function fn() {
+            // let aa = 2;
+            function fn2() {
+                console.log(1);
+            }
+            console.log(fn2() === fn2());
+            // return {
+            //     a: function () {
+            //         // console.log(aa);
+            //         aa = 3;
+            //         // console.log(aa);
+            //         return aa;
+            //     },
+            //     b: function () {
+            //         return aa;
+            //     }
+            // }
+        }
+
+        fn()
+
+        // var obj = {
+        //     a: 1,
+        //     b: 2
+        // }
+        // var arr = [1, 2, 3];
+
+        // console.log(arr === arr);
+        // console.log(obj === obj);
+        // console.log(fn === fn);
+
+        // var ff = fn();
+        // console.log(ff.a());
+        // console.log(ff.b());
+        // console.log(fn());
+        // console.log(fn());
+        // console.log(fn().a());
+        // console.log(fn().b());
+        // fn().a();
+        // fn().b();
+    </script> -->
+
+    <!-- <script>
+        console.log(new Object() === new Object());
+        console.log(new Array() === new Array());
+        console.log(new Function() === new Function());
+    </script> -->
+
+    <!-- <script>
+        function fn(a, b, callback) {
+            console.log(a + b);
+            callback();
+        }
+
+        fn(1, 2, function () {
+            console.log('我是最后执行的函数');
+        })
+    </script> -->
+</body>
+
+</html>
